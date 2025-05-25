@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form Validation</title>
+    <script>
+        function validateForm() {
+            // Get values from the form
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var enroll = document.getElementById("enroll").value;
+
+            // Check if name is empty
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Check if email is valid
+            var emailPattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Check if password is at least 8 characters
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters.");
+                return false;
+            }
+
+            // Check if enrollment number is 6 digits
+            var enrollPattern = /^\d{6}$/;
+            if (!enrollPattern.test(enroll)) {
+                alert("Enrollment number must be 6 digits (e.g., 230367).");
+                return false;
+            }
+
+            // If all checks pass
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body style="background-color: aqua;" >
+    <h1 style="text-align: center;"> G C E T KASHMIR </h1>
+    <h2 style="text-align: center;">student Registration form </h2>
+    
+    <form  onsubmit="return validateForm();">
+        Name: <input type="text" id="name"><br><br><br>
+        Email: <input type="text" id="email"><br><br><br>
+        Password: <input type="password" id="password"><br><br><br>
+        Enrollment No: <input type="text" id="enroll" maxlength="6"><br><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+
+</body>
+</html>
