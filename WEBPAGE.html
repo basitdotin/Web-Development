@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>GCET Kashmir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav {
+            background: #34495e;
+            padding: 10px 0;
+            text-align: center;
+            animation: fadeIn 1.2s 0.3s backwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+            position: relative;
+        }
+        nav a:hover {
+            color: #f39c12;
+            transform: scale(1.1) rotate(-2deg);
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #f39c12;
+            transition: width 0.3s;
+            margin: 0 auto;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+            animation: fadeInUp 1.2s 0.5s backwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h2, h3 {
+            color: #2c3e50;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                left: -30px;
+            }
+            to {
+                opacity: 1;
+                left: 0;
+            }
+        }
+        ul li {
+            opacity: 0;
+            animation: fadeInList 0.7s forwards;
+        }
+        ul li:nth-child(1) { animation-delay: 0.6s; }
+        ul li:nth-child(2) { animation-delay: 0.8s; }
+        ul li:nth-child(3) { animation-delay: 1s; }
+        ul li:nth-child(4) { animation-delay: 1.2s; }
+        ul li:nth-child(5) { animation-delay: 1.4s; }
+        @keyframes fadeInList {
+            from { opacity: 0; transform: translateX(-20px);}
+            to { opacity: 1; transform: translateX(0);}
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+<header>
+    
+    <img src="GCETLOGO.png" alt="GCET Kashmir Logo" style="height:70px; vertical-align:middle; margin-right:16px;">
+    <h1 style="display:inline-block; vertical-align:middle; margin:0;">GCET Kashmir</h1>
+  
+</header>
+
+</header>
+
+<body>
+    <header>
+       
+        <p>Government College of Engineering and Technology, Kashmir</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Departments</a>
+        <a href="#">Admissions</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to GCET Kashmir</h2>
+        <p>
+            GCET Kashmir is a premier engineering institution located in the beautiful valley of Kashmir. 
+            We offer undergraduate and postgraduate programs in various engineering disciplines.
+        </p>
+        <h3>Our Departments</h3>
+        <ul>
+            <li>Computer Science & Engineering</li>
+            <li>Civil Engineering</li>
+            <li>Electrical Engineering</li>
+            <li>Mechanical Engineering</li>
+            <li>Electronics & Communication Engineering</li>
+        </ul>
+        <h3>Contact Us</h3>
+        <p>
+            Address: GCET Kashmir, Safapora, Ganderbal, Jammu & Kashmir<br>
+            Email: info@gcetkashmir.ac.in<br>
+            Phone: +91-12345-67890
+        </p>
+    </div>
+    <footer>
+        &copy; 2025 BASIT NAZIR. All rights reserved.
+    </footer>
+</body>
+</html>
