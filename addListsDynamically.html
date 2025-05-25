@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student Details Dynamically</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        ul { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Add Student Details</h2>
+    <form id="studentForm">
+        <input type="text" id="studentName" placeholder="Enter student name" required>
+        <input type="text" id="studentRoll" placeholder="Enter roll number" required>
+        <button type="submit">Add Student</button>
+    </form>
+    <ul id="studentList"></ul>
+
+    <script>
+        const form = document.getElementById('studentForm');
+        const studentList = document.getElementById('studentList');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('studentName').value.trim();
+            const roll = document.getElementById('studentRoll').value.trim();
+            if (name && roll) {
+                const li = document.createElement('li');
+                li.textContent = `Name: ${name}, Roll No: ${roll}`;
+                studentList.appendChild(li);
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>

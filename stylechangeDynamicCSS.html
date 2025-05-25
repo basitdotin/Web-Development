@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Style Change Example</title>
+    <style>
+        #myText {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Live Style Change (Dynamic CSS)</h2>
+    <p id="myText">This is some text. Change my style!</p>
+
+    <label for="colorPicker">Text Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+
+    <label for="fontSize">Font Size:</label>
+    <input type="range" id="fontSize" min="10" max="50" value="20">
+
+    <script>
+        const text = document.getElementById('myText');
+        const colorPicker = document.getElementById('colorPicker');
+        const fontSize = document.getElementById('fontSize');
+
+        colorPicker.addEventListener('input', function() {
+            text.style.color = colorPicker.value;
+        });
+
+        fontSize.addEventListener('input', function() {
+            text.style.fontSize = fontSize.value + 'px';
+        });
+    </script>
+</body>
+</html>

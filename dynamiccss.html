@@ -1,0 +1,32 @@
+<!-- Example 2: Live Style Change (Dynamic CSS) -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Background</title>
+<style>
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 20px;
+}
+</style>
+</head>
+<body>
+    <h2>Change the Box Background Color</h2>
+    <div id="box"></div>
+    <label for="colorInput">Choose a color: </label>
+    <input type="color" id="colorInput">
+
+    <script>
+        // Get the box and color input elements
+        var box = document.getElementById("box");
+        var colorInput = document.getElementById("colorInput");
+
+        // When the color input changes, update the box background
+        colorInput.addEventListener("input", function() {
+            box.style.backgroundColor = colorInput.value;
+        });
+    </script>
+</body>
+</html>

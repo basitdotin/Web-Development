@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Dynamic  Text Example</title>
+ 
+</head>
+<body  style="background-color: #cb0ef6; font-family: Arial, sans-serif;">
+    <h1 style="text-align: center;"> Simple Dynamic HTML Example</h1>
+    <div style="text-align: center;" id="content">This is the original content before </div>
+    <div style="text-align: center;">
+        <button onclick="updateContent()">click to change text</button>
+    </div>
+
+    <script>
+        function updateContent() {
+            // Dynamically change the content without reloading the page
+            document.getElementById('content').innerHTML = "The content has been updated dynamically using JavaScript!";
+        }
+    </script>
+</body>
+</html>
