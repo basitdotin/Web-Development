@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking - URL Rewriting</title>
+</head>
+<body>
+    <h2>Session Tracking using URL Rewriting</h2>
+    <!-- Simple form to get the user's name -->
+    <form id="nameForm">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // When the form is submitted
+        document.getElementById('nameForm').onsubmit = function(event) {
+            event.preventDefault(); // Stop the form from reloading the page
+            const username = document.getElementById('username').value;
+            // Redirect to welcome.html with the username in the URL
+            window.location.href = 'welcome.html?username=' + encodeURIComponent(username);
+        };
+    </script>
+</body>
+</html>

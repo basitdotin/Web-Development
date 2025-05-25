@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking using Hidden Fields</title>
+</head>
+<body>
+    <h2>Session Tracking Example (Hidden Fields)</h2>
+    <form action="sessiontrackHIDDENFIELDS.html" method="get">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" name="username" value="">
+        <input type="hidden" name="sessionId" value="123456789">
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- Display submitted data -->
+    <script>
+        // Parse URL parameters
+        function getParams() {
+            let params = {};
+            window.location.search.substring(1).split("&").forEach(function(pair) {
+                let [key, value] = pair.split("=");
+                if (key) params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+            });
+            return params;
+        }
+
+        const params = getParams();
+        if (params.username) {
+            document.write("<p>Welcome, <b>" + params.username + "</b>!</p>");
+            document.write("<p>Your session ID (from hidden field) is: <b>" + params.sessionId + "</b></p>");
+        }
+    </script>
+</body>
+</html>
